@@ -26,7 +26,7 @@ window.i18nData.en = {
             answer: `
             The following video shows how to connect your smartwatch to your phone:
 
-            <video src="videos/connection_en.mp4" style="width: 100%" controls/>
+            <video src="videos/connection_en.mp4" style="width: 100%" controls poster="videos/connection_en_poster.jpg"/>
             `
         },
         {
