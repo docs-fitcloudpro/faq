@@ -63,7 +63,7 @@ const noteTitle = {
 };
 
 let appName = 'FitCloudPro';
-let currentLanguage = 'zh';
+let currentLanguage = 'en';
 let currentCategory = 'all';
 let currentTheme = 'system';
 
