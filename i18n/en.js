@@ -22,7 +22,7 @@ window.i18nData.en = {
     faqData: [
         {
             category: "connection",
-            question: "Why can't my phone find the watch's Bluetooth signal?",
+            question: "Why can't my phone find the watch's bluetooth signal?",
             answer: `
             Please check the following:
 
@@ -37,8 +37,10 @@ window.i18nData.en = {
             5. Make sure you've granted Bluetooth permissions to the current App. Specifically, go to [Settings] - [Apps] - [{app_name}] and check if Bluetooth permissions are granted.
 
             6. Try restarting your phone's Bluetooth:
-            Method 1: Go to [Settings] - [Bluetooth], turn off Bluetooth, then turn it back on.
-            Method 2: Swipe down from the top of your phone screen to access the control center, tap the Bluetooth icon to turn it off, then tap again to turn it on.
+            
+                • Method 1: Go to [Settings] - [Bluetooth], turn off Bluetooth, then turn it back on.
+
+                • Method 2: Swipe down from the top of your phone screen to access the control center, tap the Bluetooth icon to turn it off, then tap again to turn it on.
 
             7. Reset the watch to factory settings. Specifically, on the watch, go to [Settings] - [System] - [Factory Reset] and select [Confirm].
 
