@@ -5,7 +5,7 @@ window.i18nData.sv = {
     mainTitle: "Vanliga frågor",
     subtitle: "Vanliga frågor och felsökningsguide för smartklockor",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Alla",

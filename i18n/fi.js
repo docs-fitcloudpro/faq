@@ -5,7 +5,7 @@ window.i18nData.fi = {
     mainTitle: "Usein kysytyt kysymykset",
     subtitle: "Älykellon käyttöön liittyvät UKK:t ja vianmääritysopas",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Kaikki",

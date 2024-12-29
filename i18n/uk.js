@@ -5,7 +5,7 @@ window.i18nData.uk = {
     mainTitle: "Поширені запитання",
     subtitle: "Поширені запитання та посібник з усунення несправностей для розумного годинника",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Всі",

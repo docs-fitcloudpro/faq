@@ -5,7 +5,7 @@ window.i18nData.hr = {
     mainTitle: "Često postavljana pitanja",
     subtitle: "Vodič za rješavanje problema i često postavljana pitanja o korištenju pametnog sata",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "Sve",

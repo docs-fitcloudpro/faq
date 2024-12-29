@@ -5,7 +5,7 @@ window.i18nData.he = {
     mainTitle: "שאלות נפוצות",
     subtitle: "מדריך פתרון בעיות ושאלות נפוצות לשעון החכם",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "הכל",

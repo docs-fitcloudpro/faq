@@ -5,7 +5,7 @@ window.i18nData.cs = {
     mainTitle: "Časté dotazy",
     subtitle: "Průvodce řešením problémů a často kladené dotazy k chytrým hodinkám",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "Vše",

@@ -5,7 +5,7 @@ window.i18nData.el = {
     mainTitle: "Συχνές Ερωτήσεις",
     subtitle: "Οδηγός συχνών ερωτήσεων και αντιμετώπισης προβλημάτων για έξυπνα ρολόγια",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Όλα",

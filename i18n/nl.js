@@ -5,7 +5,7 @@ window.i18nData.nl = {
     mainTitle: "Veelgestelde vragen",
     subtitle: "Veelgestelde vragen en probleemoplossing voor smartwatches",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Alles",

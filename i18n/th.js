@@ -5,7 +5,7 @@ window.i18nData.th = {
     mainTitle: "คำถามที่พบบ่อย",
     subtitle: "คำถามที่พบบ่อยและคู่มือการแก้ไขปัญหาสำหรับนาฬิกาอัจฉริยะ",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "ทั้งหมด",

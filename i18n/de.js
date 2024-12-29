@@ -5,7 +5,7 @@ window.i18nData.de = {
     mainTitle: "Häufig gestellte Fragen",
     subtitle: "FAQ und Fehlerbehebung für Ihre Smartwatch",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "Alle",

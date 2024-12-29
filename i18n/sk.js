@@ -5,7 +5,7 @@ window.i18nData.sk = {
     mainTitle: "Často kladené otázky",
     subtitle: "Často kladené otázky a riešenie problémov pre inteligentné hodinky",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "Všetko",

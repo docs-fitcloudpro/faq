@@ -5,7 +5,7 @@ window.i18nData.fr = {
     mainTitle: "Foire Aux Questions",
     subtitle: "Guide de dépannage et FAQ pour votre montre connectée",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Tout",

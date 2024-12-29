@@ -5,7 +5,7 @@ window.i18nData.es = {
     mainTitle: "Preguntas frecuentes",
     subtitle: "Guía de solución de problemas y preguntas frecuentes sobre el uso del reloj inteligente",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd.",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd.",
     },
     categories: {
         all: "Todo",

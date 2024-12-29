@@ -5,7 +5,7 @@ window.i18nData.ru = {
     mainTitle: "Часто задаваемые вопросы",
     subtitle: "Руководство по устранению неполадок и часто задаваемые вопросы об использовании умных часов",
     footer: {
-        copyright: "© 2025 Shenzhen Tuobu Smart Big Data Co., Ltd",
+        copyright: "© 2025 Shenzhen Tuobu Intelligent Big Data Co., Ltd",
     },
     categories: {
         all: "Все",
