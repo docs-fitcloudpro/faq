@@ -22,7 +22,7 @@ window.i18nData.en = {
     faqData: [
         {
             category: "connection",
-            question: "Why can't I find my watch device?",
+            question: "Why can't my phone find the watch's Bluetooth signal?",
             answer: `
             Please check the following:
 

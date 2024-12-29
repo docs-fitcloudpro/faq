@@ -22,7 +22,7 @@ window.i18nData.zh = {
     faqData: [
         {
             category: "connection",
-            question: "我无法搜索到我的手表设备，怎么办？",
+            question: "手机搜索不到手表蓝牙，该如何解决？",
             answer: `
             请检查以下项目：
 
