@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCloudPro FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- 添加动画库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- 添加字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="logo.png" alt="FitCloudPro" height="32">
+                </div>
+                <div class="nav-buttons">
+                    <div class="language-switcher">
+                        <button class="language-btn" id="languageBtn">
+                            <span class="material-icons">language</span>
+                        <span class="current-lang">简体中文</span>
+                        <span class="material-icons">expand_more</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <!-- 语言选项将通过 JS 动态生成 -->
+                    </div>
+                </div>
+                <div class="theme-switcher">
+                    <button class="theme-btn" id="themeBtn">
+                        <span class="material-icons">dark_mode</span>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <header class="header">
+                <h1 class="animate__animated animate__fadeIn">常见问题解答</h1>
+                <p class="subtitle animate__animated animate__fadeIn">找到您需要的所有帮助和支持</p>
+                
+                <div class="search-container animate__animated animate__fadeIn">
+                    <i class="material-icons search-icon">search</i>
+                    <input type="text" id="searchInput" placeholder="搜索常见问题...">
+                </div>
+            </header>
+
+            <main>
+                <div class="categories-container animate__animated animate__fadeIn">
+                    <div class="category-tabs" id="categoryTabs">
+                        <!-- 分类标签将通过JS动态生成 -->
+                    </div>
+                </div>
+                
+                <div id="faqContainer" class="animate__animated animate__fadeIn">
+                    <!-- FAQ items will be dynamically inserted here -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 Shenzhen Tuobu Intelligent Big Data Co., Ltd. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 先加载各语言数据 -->
+    <script src="i18n/zh.js"></script>
+    <script src="i18n/zh-TW.js"></script>
+    <script src="i18n/en.js"></script>
+    <script src="i18n/ar.js"></script>
+    <script src="i18n/fa.js"></script>
+    <script src="i18n/vi.js"></script>
+    <script src="i18n/th.js"></script>
+    <script src="i18n/uk.js"></script>
+    <script src="i18n/de.js"></script>
+    <script src="i18n/el.js"></script>
+    <script src="i18n/es.js"></script>
+    <script src="i18n/fi.js"></script>
+    <script src="i18n/fr.js"></script>
+    <script src="i18n/he.js"></script>
+    <script src="i18n/hi.js"></script>
+    <script src="i18n/hr.js"></script>
+    <script src="i18n/hu.js"></script>
+    <script src="i18n/id.js"></script>
+    <script src="i18n/it.js"></script>
+    <script src="i18n/ja.js"></script>
+    <script src="i18n/ko.js"></script>
+    <script src="i18n/nl.js"></script>
+    <script src="i18n/sk.js"></script>
+    <script src="i18n/sq.js"></script>
+    <script src="i18n/sv.js"></script>
+    <script src="i18n/ru.js"></script>
+    <!-- 加载主入口文件 -->
+    <script src="i18n/index.js"></script>
+    <!-- 然后加载主脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 
