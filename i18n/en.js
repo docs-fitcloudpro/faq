@@ -21,6 +21,15 @@ window.i18nData.en = {
     },
     faqData: [
         {
+            category: "basic",
+            question: "Smartwatch connection setup guide",
+            answer: `
+            The following video shows how to connect your smartwatch to your phone:
+
+            <video src="videos/connection_en.mp4" style="width: 100%" controls/>
+            `
+        },
+        {
             category: "connection",
             question: "Why can't my phone find the watch's bluetooth signal?",
             answer: `
