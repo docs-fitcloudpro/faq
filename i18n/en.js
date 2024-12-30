@@ -33,7 +33,7 @@ window.i18nData.en = {
         {
             platform: "ios",
             category: "connection",
-            question: "Why can't my phone find the watch's bluetooth signal?",
+            question: "Why can't my phone discover the watch device?",
             answer: `
             Please check the following:
 
