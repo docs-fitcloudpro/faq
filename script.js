@@ -122,6 +122,7 @@ function initializeApp() {
     createFaqElements();
     setupSearch();
     setupLanguageSwitcher();
+    setupFAQInteractions();
 }
 
 function initializeTheme() {
@@ -321,16 +322,6 @@ function createFaqElements() {
             </div>
             <div class="faq-answer">${formattedAnswer}</div>
         `;
-        
-        const questionEl = faqItem.querySelector('.faq-question');
-        questionEl.addEventListener('click', (e) => {
-            document.querySelectorAll('.faq-item.active').forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                }
-            });
-            faqItem.classList.toggle('active');
-        });
         
         faqContainer.appendChild(faqItem);
     });
@@ -639,12 +630,48 @@ function initializeFromURL() {
 
 // 添加滚动到可见区域的函数
 function scrollIntoViewWithOffset(element, offset = 100) {
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - offset;
-    
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
+    requestAnimationFrame(() => {
+        const elementRect = element.getBoundingClientRect();
+        const questionRect = element.querySelector('.faq-question').getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const navHeight = document.querySelector('.top-nav')?.offsetHeight || 0;
+        
+        // 检查元素是否已经在可见区域内
+        const isVisible = (
+            elementRect.top >= navHeight &&
+            elementRect.bottom <= viewportHeight
+        );
+        
+        // 如果已经在可见区域内,则不需要滚动
+        if (isVisible) {
+            return;
+        }
+        
+        // 使用 window.scrollY 替代 pageYOffset
+        const questionTop = window.scrollY + questionRect.top;
+        const elementBottom = window.scrollY + elementRect.bottom;
+        const viewportTop = window.scrollY + navHeight + offset;
+        const viewportBottom = window.scrollY + viewportHeight - offset;
+        
+        let scrollPosition;
+        const totalHeight = elementRect.height;
+        
+        // 如果FAQ项目的总高度小于可视区域高度(减去导航栏和偏移量)
+        if (totalHeight <= viewportHeight - navHeight - offset * 2) {
+            // 将FAQ项目垂直居中显示
+            scrollPosition = questionTop - (viewportHeight - totalHeight) / 2 - navHeight;
+        } else {
+            // 如果FAQ项目高度超过可视区域,将其顶部对齐到可视区域顶部(考虑导航栏和偏移量)
+            scrollPosition = questionTop - navHeight - offset;
+        }
+        
+        const maxScroll = document.documentElement.scrollHeight - viewportHeight;
+        scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
+        
+        window.scrollTo({
+            top: scrollPosition,
+            behavior: "auto"
+        });
     });
 }
 
@@ -655,22 +682,29 @@ function setupFAQInteractions() {
             const faqItem = question.closest('.faq-item');
             const wasActive = faqItem.classList.contains('active');
             
-            // 关闭其他打开的FAQ
-            document.querySelectorAll('.faq-item.active').forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                }
-            });
+            // 获取当前打开的FAQ
+            const activeItems = document.querySelectorAll('.faq-item.active');
             
-            // 切换当前FAQ的状态
-            faqItem.classList.toggle('active');
-            
-            // 如果是展开操作，滚动到可见区域
             if (!wasActive) {
-                // 给一个小延迟以确保展开动画完成
-                setTimeout(() => {
+                // 如果有其他打开的FAQ，先关闭它们
+                if (activeItems.length > 0) {
+                    activeItems.forEach(item => {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    faqItem.classList.add('active');
+                    // 再次等待展开动画完成后滚动
                     scrollIntoViewWithOffset(faqItem);
-                }, 100);
+                } else {
+                    // 如果没有其他打开的FAQ，直接展开并滚动
+                    faqItem.classList.add('active');
+                    scrollIntoViewWithOffset(faqItem);
+                }
+            } else {
+                // 如果是关闭操作，直接关闭
+                faqItem.classList.remove('active');
             }
         });
     });
