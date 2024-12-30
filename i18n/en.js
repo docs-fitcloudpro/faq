@@ -21,6 +21,7 @@ window.i18nData.en = {
     },
     faqData: [
         {
+            platform: "ios",
             category: "basic",
             question: "Smartwatch connection setup guide",
             answer: `

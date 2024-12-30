@@ -13,7 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="page-wrapper">
+    <!-- 添加加载动画 -->
+    <div class="loading-wrapper">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 原有内容添加 hidden 类 -->
+    <div class="page-wrapper hidden">
         <nav class="top-nav">
             <div class="nav-content">
                 <div class="logo">
@@ -70,7 +76,10 @@
         </footer>
     </div>
 
-    <!-- 先加载各语言数据 -->
+    <!-- 先加载主脚本 -->
+    <script src="script.js"></script>
+    
+    <!-- 加载各语言数据 -->
     <script src="i18n/zh.js"></script>
     <script src="i18n/zh-TW.js"></script>
     <script src="i18n/en.js"></script>
@@ -97,9 +106,8 @@
     <script src="i18n/sq.js"></script>
     <script src="i18n/sv.js"></script>
     <script src="i18n/ru.js"></script>
-    <!-- 加载主入口文件 -->
+    
+    <!-- 最后加载 i18n 初始化文件 -->
     <script src="i18n/index.js"></script>
-    <!-- 然后加载主脚本 -->
-    <script src="script.js"></script>
 </body>
 </html> 

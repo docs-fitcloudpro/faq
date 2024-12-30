@@ -60,6 +60,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: opacity 0.3s;
 }
 
 /* 导航栏样式 */
@@ -72,6 +73,7 @@ body {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
+    transition: all var(--transition-speed);
 }
 
 .nav-content {
@@ -90,6 +92,7 @@ body {
     margin: calc(var(--header-height) + 2rem) auto 0;
     padding: 0 1rem;
     flex: 1;
+    transition: margin var(--transition-speed);
 }
 
 /* 头部样式 */
@@ -762,4 +765,60 @@ h1 {
     .language-btn {
         padding: 0 12px;
     }
+}
+
+/* 当顶部导航栏隐藏时的样式 */
+.top-nav.hidden {
+    display: none;
+}
+
+.container.no-nav {
+    margin-top: 2rem;
+}
+
+/* 加载动画样式 */
+.loading-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 隐藏内容 */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 显示内容 */
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 确保页面内容在加载时不可见 */
+.page-wrapper {
+    transition: opacity 0.3s;
 } 

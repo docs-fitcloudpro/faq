@@ -66,7 +66,48 @@ let appName = 'FitCloudPro';
 let currentLanguage = 'en';
 let currentCategory = 'all';
 let currentTheme = 'system';
+let showTopNav = true;
+let pageLoaded = false;
+let themeLoaded = false;
+let i18nLoaded = false;
 
+// 在文件开头添加平台相关常量和变量
+const PLATFORMS = {
+    ALL: 'all',
+    IOS: 'ios',
+    ANDROID: 'android',
+    NONE: 'none'
+};
+
+let currentPlatform = PLATFORMS.ALL;
+
+// 检测当前设备平台
+function detectPlatform() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+        return PLATFORMS.IOS;
+    } else if (/android/.test(userAgent)) {
+        return PLATFORMS.ANDROID;
+    }
+    return PLATFORMS.ALL;
+}
+
+function showContent() {
+    if (pageLoaded && themeLoaded && i18nLoaded) {
+        const loadingWrapper = document.querySelector('.loading-wrapper');
+        const pageWrapper = document.querySelector('.page-wrapper');
+        
+        // 隐藏加载动画
+        loadingWrapper.style.opacity = '0';
+        setTimeout(() => {
+            loadingWrapper.style.display = 'none';
+        }, 300);
+        
+        // 显示内容
+        pageWrapper.classList.remove('hidden');
+        pageWrapper.classList.add('visible');
+    }
+}
 
 function initializeApp() {
     if (typeof i18n === 'undefined') {
@@ -95,6 +136,10 @@ function initializeTheme() {
         // 否则跟随系统
         setTheme('system');
     }
+    
+    // 设置主题后标记完成
+    themeLoaded = true;
+    showContent();
 }
 
 function setTheme(theme) {
@@ -134,7 +179,6 @@ function loadLanguage() {
         } else {
             // 最后使用浏览器语言
             const bestBrowserLang = navigator.language || navigator.userLanguage;
-            console.log(bestBrowserLang);
             if(bestBrowserLang in SUPPORTED_LANGUAGES){
                 currentLanguage = bestBrowserLang;
             }else{
@@ -209,19 +253,30 @@ function setupCategories() {
             document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             currentCategory = key;
-            filterFaqsByCategory();
+            filterFaqsByCategoryAndPlatform();
         });
         
         categoriesContainer.appendChild(tab);
     });
 }
 
-function filterFaqsByCategory() {
+function matchPlatform(faqPlatform, currentPlatform) {
+    if (faqPlatform === "undefined" || faqPlatform === PLATFORMS.ALL) {
+        return currentPlatform !== PLATFORMS.NONE;
+    }
+    if (currentPlatform === PLATFORMS.ALL && faqPlatform !== PLATFORMS.NONE) {
+        return true;
+    }
+    return faqPlatform === currentPlatform;
+}
+
+function filterFaqsByCategoryAndPlatform() {
     const faqItems = document.querySelectorAll('.faq-item');
     let firstVisible = null;
     
     faqItems.forEach(item => {
-        if (currentCategory === 'all' || item.dataset.category === currentCategory) {
+        if ((currentCategory === 'all' || item.dataset.category === currentCategory)
+        && matchPlatform(item.dataset.platform, currentPlatform)) {
             item.style.display = 'block';
             if (!firstVisible) {
                 firstVisible = item;
@@ -256,6 +311,7 @@ function createFaqElements() {
             faqItem.classList.add('active');
         }
         faqItem.dataset.category = faq.category;
+        faqItem.dataset.platform = faq.platform;
         
         const formattedAnswer = formatAnswer(faq.answer);
         
@@ -279,7 +335,7 @@ function createFaqElements() {
         faqContainer.appendChild(faqItem);
     });
     
-    filterFaqsByCategory();
+    filterFaqsByCategoryAndPlatform();
 }
 
 function formatAnswer(answer) {
@@ -541,4 +597,53 @@ function setupThemeSwitcher() {
     updateThemeIcon();
 }
 
-document.addEventListener('DOMContentLoaded', initializeApp); 
+function initializeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // 检查平台参数
+    const platformParam = urlParams.get('platform');
+    if (platformParam && Object.values(PLATFORMS).includes(platformParam)) {
+        currentPlatform = platformParam;
+    } else {
+        currentPlatform = detectPlatform();
+    }
+    
+    // 更新 URL 参数
+    const url = new URL(window.location);
+    url.searchParams.set('platform', currentPlatform);
+    window.history.replaceState({}, '', url);
+    
+    // 检查是否需要隐藏顶部导航栏
+    const navHidden = urlParams.get('nav-hidden');
+    if (navHidden === 'true') {
+        showTopNav = false;
+        const topNav = document.querySelector('.top-nav');
+        const container = document.querySelector('.container');
+        
+        topNav.classList.add('hidden');
+        container.classList.add('no-nav');
+    }
+    
+    // 其他 URL 参数处理...
+    const langParam = urlParams.get('lang');
+    if (langParam && langParam in SUPPORTED_LANGUAGES) {
+        currentLanguage = langParam;
+    }
+    
+    const themeParam = urlParams.get('theme');
+    if (themeParam && ['light', 'dark'].includes(themeParam)) {
+        currentTheme = themeParam;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 确保页面一开始是隐藏的
+    document.querySelector('.page-wrapper').classList.add('hidden');
+    
+    initializeFromURL();
+    initializeApp();
+    
+    // 标记页面加载完成
+    pageLoaded = true;
+    showContent();
+}); 
