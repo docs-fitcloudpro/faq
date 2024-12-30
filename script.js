@@ -415,11 +415,11 @@ function searchFAQs(searchText) {
         
         if (searchText === '') {
             // 如果搜索框为空，恢复原始状态
-            item.style.display = currentCategory === 'all' || 
-                item.dataset.category === currentCategory ? 'block' : 'none';
+            (item.style.display = currentCategory === 'all' || 
+                item.dataset.category === currentCategory) && matchPlatform(item.dataset.platform, currentPlatform) ? 'block' : 'none';
             item.classList.remove('active');  // 移除展开状态
             clearHighlight(item);
-        } else if (question.includes(searchText) || answer.includes(searchText)) {
+        } else if ((question.includes(searchText) || answer.includes(searchText)) && matchPlatform(item.dataset.platform, currentPlatform)) {
             // 显示匹配的项目
             item.style.display = 'block';
             item.classList.add('active');  // 自动展开含搜索词的项目
@@ -455,6 +455,7 @@ function updateCategoryTabsForSearch(searchText, hasResults) {
         categoryTabs.forEach(tab => {
             tab.classList.toggle('active', tab.dataset.category === currentCategory);
         });
+        filterFaqsByCategoryAndPlatform();
     } else {
         // 在搜索模式下，移除所有分类的激活状态
         categoryTabs.forEach(tab => tab.classList.remove('active'));
