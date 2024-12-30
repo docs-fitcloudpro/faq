@@ -637,6 +637,45 @@ function initializeFromURL() {
     }
 }
 
+// 添加滚动到可见区域的函数
+function scrollIntoViewWithOffset(element, offset = 100) {
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+}
+
+// 修改 setupFAQInteractions 函数
+function setupFAQInteractions() {
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.closest('.faq-item');
+            const wasActive = faqItem.classList.contains('active');
+            
+            // 关闭其他打开的FAQ
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // 切换当前FAQ的状态
+            faqItem.classList.toggle('active');
+            
+            // 如果是展开操作，滚动到可见区域
+            if (!wasActive) {
+                // 给一个小延迟以确保展开动画完成
+                setTimeout(() => {
+                    scrollIntoViewWithOffset(faqItem);
+                }, 100);
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // 确保页面一开始是隐藏的
     document.querySelector('.page-wrapper').classList.add('hidden');
