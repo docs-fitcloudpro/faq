@@ -639,7 +639,7 @@ function scrollIntoViewWithOffset(element, offset = 100) {
         // 检查元素是否已经在可见区域内
         const isVisible = (
             elementRect.top >= navHeight &&
-            elementRect.top <= viewportHeight - elementRect.height - 40
+            elementRect.top <= viewportHeight - questionRect.height - 40
         );
         
         // 如果已经在可见区域内,则不需要滚动
