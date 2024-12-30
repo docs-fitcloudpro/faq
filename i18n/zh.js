@@ -21,6 +21,7 @@ window.i18nData.zh = {
     },
     faqData: [
         {
+            platform: "ios",
             category: "connection",
             question: "手机搜索不到手表蓝牙，该如何解决？",
             answer: `
@@ -49,6 +50,7 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "ios",
             category: "connection",
             question: "如何确认手表与手机已成功连接？",
             answer: `
@@ -61,6 +63,7 @@ window.i18nData.zh = {
             <img src="images/share_system_notifications_zh.png" style="width: 50%"/> 	`
         },
         {
+            platform: "all",
             category: "connection",
             question: "蓝牙连接经常断开，如何改善？",
             answer: `
@@ -73,6 +76,7 @@ window.i18nData.zh = {
             3. 更新手表固件和手机 App 版本。`
         },
         {
+            platform: "ios",
             category: "notification",
             question: "手表上无法接收手机消息通知，怎么办？",
             answer: `
@@ -93,6 +97,7 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "notification",
             question: "手表上只接收部分应用的通知，如何解决？",
             answer: `
@@ -101,6 +106,7 @@ window.i18nData.zh = {
             具体来讲， 打开 【{app_name}】 - 【设备】 - 【消息提醒】 ， 然后打开对应 App 的消息通知提醒。`
         },
         {
+            platform: "all",
             category: "notification",
             question: "为什么微信、QQ来信息提醒时，没有详细内容？",
             answer: `
@@ -115,6 +121,7 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "data",
             question: "如何在手机 App 中查看我的运动和健康数据？",
             answer: `
@@ -125,12 +132,14 @@ window.i18nData.zh = {
             同步完成后， 便可以在 App 中查看心率、步数、睡眠、压力、血氧、体温、运动等数据。`
         },
         {
+            platform: "all",
             category: "health",
             question: "我的运动和健康数据不准确，怎么办？",
             answer: `
             请确认您的个人信息资料是否正确填写，具体来讲，手表的部分功能测量算法依赖于您的性别、身高、体重、年龄等个人信息，请确保这些资料的准确性，以获得更准确的运动和健康数据。`
         },
         {
+            platform: "all",
             category: "data",
             question: "手表上的数据与 App 上的不一致，怎么办？",
             answer: `
@@ -143,6 +152,7 @@ window.i18nData.zh = {
             {faq_note}通常来讲，我们不建议同一块手表同时连接多个手机或 App， 因为这样可能会导致数据同步不一致， 甚至导致数据丢失。此外，为保证数据不丢失，App 上的当天数据数据是累计相加的，而手表在重新绑定之后，手表上的数据就会被清零，若重新绑定过手表，可能会导致手表上的数据与 App 上的数据不一致。以睡眠数据为例，如果您在手表连接上手机 App 后立马解绑手表，手表上的数据还没有来得及同步到 App 中（通常由于数据量大，同步数据是需要花费一定的时间的）， 那么手表上的数据就会清空， 而 App 上的便会出现睡眠数据丢失的情况。因此，我们建议您的确需要解绑手表的情况下，在手表连接上手机 App 后， 不要立马解绑手表， 而是等待手表上的数据同步完成后再解绑手表。`
         },
         {
+            platform: "ios",
             category: "weather",
             question: "手表上无法显示天气，如何解决？",
             answer: `
@@ -164,6 +174,7 @@ window.i18nData.zh = {
             如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "weather",
             question: "手表上的天气数据不准确，怎么办？",
             answer: `
@@ -176,6 +187,7 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "如何将云表盘上传到手表？",
             answer: `
@@ -190,6 +202,7 @@ window.i18nData.zh = {
             4. 等待表盘上传完成， 手表会自动更换表盘。`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "如何自定义表盘，并上传到手表？",
             answer: `
@@ -206,6 +219,7 @@ window.i18nData.zh = {
             5. 等待表盘上传完成， 手表会自动更换表盘。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "智能手表如何进行开关机？",
             answer: `
@@ -216,6 +230,7 @@ window.i18nData.zh = {
             2. 手表关机： 按住手表侧面的按钮 3-5 秒，在弹出的界面中选择【关机】，点击【确认】，手表会显示"Goodbye"的提示，然后手表会自动关机。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何对智能手表进行恢复出厂设置？",
             answer: `
@@ -228,6 +243,7 @@ window.i18nData.zh = {
             • 方法三： 在手机 App 中进行恢复出厂设置， 具体来讲， 在手机 App 中打开 【设备】 - 【恢复出厂设置】 ， 然后选择 【确认】 。`
         },
         {
+            platform: "ios",
             category: "basic",
             question: "如何解除 App 与智能手表的绑定？",
             answer: `
@@ -240,12 +256,14 @@ window.i18nData.zh = {
             {faq_note}在解绑手表设备后，一定要手动去系统设置里取消智能手表与手机的蓝牙配对，否则下次再绑定时，可能会搜索不到该手表设备，导致无法绑定。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何挂断电话？",
             answer: `
             手表端游来电提醒时，按住手表侧面的按钮 3 秒，将挂断电话。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "摇一摇拍照怎么使用？",
             answer: `
@@ -256,6 +274,7 @@ window.i18nData.zh = {
             2. 摇一摇手表设备或在手表上点击相机图标即可拍照。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何使用音乐控制功能？",
             answer: `
@@ -264,6 +283,7 @@ window.i18nData.zh = {
             {faq_note}部分手机自带音乐播放器不支持，可支持 QQ 音乐播放器、网易云音乐播放器，PLAY 音乐等`
         },
         {
+            platform: "all",
             category: "device",
             question: "手表固件升级失败，怎么办?",
             answer: `
@@ -286,6 +306,7 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "device",
             question: "充电一段时间了，设备还是无反应是什么原因？",
             answer: `
@@ -294,6 +315,7 @@ window.i18nData.zh = {
             {faq_note}充电时最好用手机充电头连接充电，电脑上电流过小，低电时可能很难充进去。`
         },
         {
+            platform: "all",
             category: "device",
             question: "抬手亮屏为什么不亮？",
             answer: `
@@ -308,18 +330,21 @@ window.i18nData.zh = {
             {faq_note}如果以上方法都无法解决问题，请尝试拍摄手表的系统信息的照片以及将手机的一些系统信息截图，通过 App 中的意见反馈功能向我们反馈，在联系我们的时候尽量提供更多的有效信息给我们，以便我们更好的解决问题。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手表设备最多可以设置几个闹钟？",
             answer: `
             这个根据您的手表设备而定， 通常情况下， 手表设备可以设置 5 个闹钟。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手表设备怎么调整时间？",
             answer: `
             手表设备跟手机连接后会自动同步时间，无需手动调节。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手表设备如何设置语言？",
             answer: `
@@ -328,12 +353,14 @@ window.i18nData.zh = {
             {faq_note}部分手表支持在手表端设置语言，具体来讲，在手表端打开【菜单】 - 【设置】 - 【语言】 ， 然后选择您想要设置的语言。`
         },
         {
+            platform: "all",
             category: "other",
             question: "电池使用时间为什么变短？",
             answer: `
             若手表设备开启了翻腕亮屏、定时心率检测等功能会加大耗电量，减少电池使用时间。`
         },
         {
+            platform: "all",
             category: "other",
             question: "手表设备是否防水？",
             answer: `

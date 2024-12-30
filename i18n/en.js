@@ -21,7 +21,7 @@ window.i18nData.en = {
     },
     faqData: [
         {
-            platform: "ios",
+            platform: "none",
             category: "basic",
             question: "Smartwatch connection setup guide",
             answer: `
@@ -31,6 +31,7 @@ window.i18nData.en = {
             `
         },
         {
+            platform: "ios",
             category: "connection",
             question: "Why can't my phone find the watch's bluetooth signal?",
             answer: `
@@ -59,6 +60,7 @@ window.i18nData.en = {
             {faq_note}If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "ios",
             category: "connection",
             question: "How do I confirm that my watch is successfully connected to my phone?",
             answer: `
@@ -71,6 +73,7 @@ window.i18nData.en = {
             <img src="images/share_system_notifications_en.png" style="width: 50%"/>  `
         },
         {
+            platform: "all",
             category: "connection",
             question: "Bluetooth connection keeps disconnecting, how can I improve it?",
             answer: `
@@ -83,6 +86,7 @@ window.i18nData.en = {
             3. Update the watch firmware and phone App to the latest version.`
         },
         {
+            platform: "ios",
             category: "notification",
             question: "Why am I not receiving phone notifications on my watch?",
             answer: `
@@ -103,6 +107,7 @@ window.i18nData.en = {
             {faq_note}If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "all",
             category: "notification",
             question: "I'm only receiving notifications from some apps on my watch, how can I fix this?",
             answer: `
@@ -111,6 +116,7 @@ window.i18nData.en = {
             Specifically, open [{app_name}] - [Device] - [Message Notifications] and enable message notifications for the corresponding Apps.`
         },
         {
+            platform: "all",
             category: "data",
             question: "How can I view my activity and health data in the phone App?",
             answer: `
@@ -121,12 +127,14 @@ window.i18nData.en = {
             After syncing is complete, you can view data for heart rate, steps, sleep, stress, blood oxygen, temperature, exercise and more in the App.`
         },
         {
+            platform: "all",
             category: "health",
             question: "My activity and health data seems inaccurate, what should I do?",
             answer: `
             Please verify that your personal information is filled in correctly. Specifically, some of the watch's measurement algorithms rely on your gender, height, weight, age and other personal information. Please ensure the accuracy of this information to get more accurate activity and health data.`
         },
         {
+            platform: "all",
             category: "data",
             question: "The data on my watch doesn't match what's shown in the App, what should I do?",
             answer: `
@@ -139,6 +147,7 @@ window.i18nData.en = {
             {faq_note}Generally, we don't recommend connecting the same watch to multiple phones or Apps simultaneously as this can cause data sync inconsistencies or even data loss. Additionally, to prevent data loss, the App's daily data is cumulative, while the watch's data is cleared after rebinding. If you've rebinded the watch, this may cause discrepancies between watch and App data. For example with sleep data, if you unbind the watch immediately after connecting it to the phone App, the watch's data may not have had time to sync to the App (syncing typically takes some time due to the large amount of data), so the watch data will be cleared and sleep data will be lost in the App. Therefore, if you need to unbind your watch, we recommend waiting for data syncing to complete after connecting to the phone App before unbinding.`
         },
         {
+            platform: "ios",
             category: "weather",
             question: "Weather isn't displaying on my watch, how can I fix this?",
             answer: `
@@ -160,6 +169,7 @@ window.i18nData.en = {
             If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "all",
             category: "weather",
             question: "The weather data on my watch seems inaccurate, what should I do?",
             answer: `
@@ -172,6 +182,7 @@ window.i18nData.en = {
             {faq_note}If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "How do I upload a cloud watch face to my watch?",
             answer: `
@@ -186,6 +197,7 @@ window.i18nData.en = {
             4. Wait for the upload to complete. Your watch will automatically change to the new watch face.`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "How do I customize a watch face and upload it to my watch?",
             answer: `
@@ -202,6 +214,7 @@ window.i18nData.en = {
             5. Wait for the upload to complete. Your watch will automatically change to the new watch face.`
         },
         {
+            platform: "all",
             category: "basic",
             question: "How do I turn my smartwatch on and off?",
             answer: `
@@ -212,6 +225,7 @@ window.i18nData.en = {
             2. To turn off: Press and hold the side button for 3-5 seconds, select [Power Off] in the popup interface, click [Confirm], the watch will show a "Goodbye" prompt, then automatically power off.`
         },
         {
+            platform: "all",
             category: "basic",
             question: "How do I perform a factory reset on my smartwatch?",
             answer: `
@@ -224,6 +238,7 @@ window.i18nData.en = {
             Method 3: Reset from the phone App. Specifically, in the phone App open [Device] - [Factory Reset], then select [Confirm].`
         },
         {
+            platform: "ios",
             category: "basic",
             question: "How do I unbind my App from my smartwatch?",
             answer: `
@@ -236,12 +251,14 @@ window.i18nData.en = {
             {faq_note}After unbinding the watch device, make sure to manually unpair the smartwatch from your phone's Bluetooth settings, otherwise the watch device may not be discoverable the next time you try to bind it.`
         },
         {
+            platform: "all",
             category: "basic",
             question: "How do I end a phone call?",
             answer: `
             When there's an incoming call alert on the watch, press and hold the side button for 3 seconds to end the call.`
         },
         {
+            platform: "all",
             category: "basic",
             question: "How do I use the shake to take photo feature?",
             answer: `
@@ -252,6 +269,7 @@ window.i18nData.en = {
             2. Shake your watch device or tap the camera icon on the watch to take a photo.`
         },
         {
+            platform: "all",
             category: "basic",
             question: "How do I use the music control feature?",
             answer: `
@@ -260,6 +278,7 @@ window.i18nData.en = {
             {faq_note}Some built-in phone music players may not be supported. Compatible players include QQ Music Player, NetEase Cloud Music Player, PLAY Music, etc.`
         },
         {
+            platform: "all",
             category: "device",
             question: "What should I do if the watch firmware upgrade fails?",
             answer: `
@@ -282,6 +301,7 @@ window.i18nData.en = {
             {faq_note}If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "all",
             category: "device",
             question: "Why isn't my device responding after charging for a while?",
             answer: `
@@ -290,6 +310,7 @@ window.i18nData.en = {
             {faq_note}It's best to charge using a phone charger, as computer USB ports may provide insufficient current, making it difficult to charge when the battery is low.`
         },
         {
+            platform: "all",
             category: "device",
             question: "Why doesn't the screen light up when I raise my wrist?",
             answer: `
@@ -304,18 +325,21 @@ window.i18nData.en = {
             {faq_note}If none of the above methods solve the problem, please try taking photos of your watch's system information and screenshots of your phone's system information, then send them to us through the feedback feature in the App. When contacting us, please provide as much relevant information as possible to help us better solve the problem.`
         },
         {
+            platform: "all",
             category: "device",
             question: "How many alarms can I set on my watch device?",
             answer: `
             This depends on your watch device model, but typically watch devices can support 5 alarms.`
         },
         {
+            platform: "all",
             category: "device",
             question: "How do I adjust the time on my watch device?",
             answer: `
             The watch device automatically syncs time with your phone when connected, so manual adjustment isn't necessary.`
         },
         {
+            platform: "all",
             category: "device",
             question: "How do I set the language on my watch device?",
             answer: `
@@ -324,12 +348,14 @@ window.i18nData.en = {
             {faq_note}Some watches support setting language on the watch itself. Specifically, on the watch open [Menu] - [Settings] - [Language], then select your desired language.`
         },
         {
+            platform: "all",
             category: "other",
             question: "Why has the battery life become shorter?",
             answer: `
             If features like raise-to-wake and periodic heart rate monitoring are enabled on the watch device, these will increase power consumption and reduce battery life.`
         },
         {
+            platform: "all",
             category: "other",
             question: "Is my watch device water-resistant?",
             answer: `

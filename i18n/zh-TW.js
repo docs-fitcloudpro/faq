@@ -21,6 +21,7 @@ window.i18nData['zh-TW'] = {
     },
     faqData: [
         {
+            platform: "ios",
             category: "connection",
             question: "手機搜尋不到手錶藍牙，該如何解決？",
             answer: `
@@ -49,6 +50,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "ios",
             category: "connection", 
             question: "如何確認手錶與手機已成功連接？",
             answer: `
@@ -59,6 +61,7 @@ window.i18nData['zh-TW'] = {
             點擊驚嘆號，可以看到裝置名稱等資訊， 且其中例如【共享系統通知】等開關均已開啟。`
         },
         {
+            platform: "all",
             category: "connection",
             question: "藍牙連接經常斷開，如何改善？",
             answer: `
@@ -71,6 +74,7 @@ window.i18nData['zh-TW'] = {
             3. 更新手錶韌體和手機 App 版本。`
         },
         {
+            platform: "ios",
             category: "notification",
             question: "手錶上無法接收手機訊息通知，怎麼辦？",
             answer: `
@@ -89,6 +93,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "all",
             category: "notification",
             question: "手錶上只接收部分應用程式的通知，如何解決？",
             answer: `
@@ -97,6 +102,7 @@ window.i18nData['zh-TW'] = {
             具體來說， 開啟 【{app_name}】 - 【裝置】 - 【訊息提醒】 ， 然後開啟對應 App 的訊息通知提醒。`
         },
         {
+            platform: "all",
             category: "data",
             question: "如何在手機 App 中查看我的運動和健康數據？",
             answer: `
@@ -107,12 +113,14 @@ window.i18nData['zh-TW'] = {
             同步完成後， 便可以在 App 中查看心率、步數、睡眠、壓力、血氧、體溫、運動等數據。`
         },
         {
+            platform: "all",
             category: "health",
             question: "我的運動和健康數據不準確，怎麼辦？",
             answer: `
             請確認您的個人資訊資料是否正確填寫，具體來說，手錶的部分功能測量演算法依賴於您的性別、身高、體重、年齡等個人資訊，請確保這些資料的準確性，以獲得更準確的運動和健康數據。`
         },
         {
+            platform: "all",
             category: "data",
             question: "手錶上的數據與 App 上的不一致，怎麼辦？",
             answer: `
@@ -125,6 +133,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}通常來說，我們不建議同一塊手錶同時連接多個手機或 App， 因為這樣可能會導致數據同步不一致， 甚至導致數據遺失。此外，為保證數據不遺失，App 上的當天數據數據是累計相加的，而手錶在重新綁定之後，手錶上的數據就會被清零，若重新綁定過手錶，可能會導致手錶上的數據與 App 上的數據不一致。以睡眠數據為例，如果您在手錶連接上手機 App 後立馬解除綁定手錶，手錶上的數據還沒有來得及同步到 App 中（通常由於數據量大，同步數據是需要花費一定的時間的）， 那麼手錶上的數據就會清空， 而 App 上的便會出現睡眠數據遺失的情況。因此，我們建議您的確需要解除綁定手錶的情況下，在手錶連接上手機 App 後， 不要立馬解除綁定手錶， 而是等待手錶上的數據同步完成後再解除綁定手錶。`
         },
         {
+            platform: "ios",
             category: "weather",
             question: "手錶上無法顯示天氣，如何解決？",
             answer: `
@@ -146,6 +155,7 @@ window.i18nData['zh-TW'] = {
             如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "all",
             category: "weather",
             question: "手錶上的天氣數據不準確，怎麼辦？",
             answer: `
@@ -158,6 +168,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "如何將雲錶盤上傳到手錶？",
             answer: `
@@ -172,6 +183,7 @@ window.i18nData['zh-TW'] = {
             4. 等待錶盤上傳完成， 手錶會自動更換錶盤。`
         },
         {
+            platform: "all",
             category: "watchface",
             question: "如何自定義錶盤，並上傳到手錶？",
             answer: `
@@ -188,6 +200,7 @@ window.i18nData['zh-TW'] = {
             5. 等待錶盤上傳完成， 手錶會自動更換錶盤。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "智慧手錶如何進行開關機？",
             answer: `
@@ -198,6 +211,7 @@ window.i18nData['zh-TW'] = {
             2. 手錶關機： 按住手錶側面的按鈕 3-5 秒，在彈出的介面中選擇【關機】，點擊【確認】，手錶會顯示"Goodbye"的提示，然後手錶會自動關機。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何對智慧手錶進行恢復出廠設定？",
             answer: `
@@ -210,6 +224,7 @@ window.i18nData['zh-TW'] = {
             方法三： 在手機 App 中進行恢復出廠設定， 具體來說， 在手機 App 中開啟 【裝置】 - 【恢復出廠設定】 ， 然後選擇 【確認】 。`
         },
         {
+            platform: "ios",
             category: "basic",
             question: "如何解除 App 與智慧手錶的綁定？",
             answer: `
@@ -222,12 +237,14 @@ window.i18nData['zh-TW'] = {
             {faq_note}在解除綁定手錶裝置後，一定要手動去系統設定裡取消智慧手錶與手機的藍牙配對，否則下次再綁定時，可能會搜尋不到該手錶裝置，導致無法綁定。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何掛斷電話？",
             answer: `
             手錶端游來電提醒時，按住手錶側面的按鈕 3 秒，將掛斷電話。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "搖一搖拍照怎麼使用？",
             answer: `
@@ -238,6 +255,7 @@ window.i18nData['zh-TW'] = {
             2. 搖一搖手錶裝置或在手錶上點擊相機圖示即可拍照。`
         },
         {
+            platform: "all",
             category: "basic",
             question: "如何使用音樂控制功能？",
             answer: `
@@ -246,6 +264,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}部分手機自帶音樂播放器不支援，可支援 QQ 音樂播放器、網易雲音樂播放器，PLAY 音樂等`
         },
         {
+            platform: "all",
             category: "device",
             question: "手錶韌體升級失敗，怎麼辦?",
             answer: `
@@ -268,6 +287,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "all",
             category: "device",
             question: "充電一段時間了，裝置還是無反應是什麼原因？",
             answer: `
@@ -276,6 +296,7 @@ window.i18nData['zh-TW'] = {
             {faq_note}充電時最好用手機充電頭連接充電，電腦上電流過小，低電時可能很難充進去。`
         },
         {
+            platform: "all",
             category: "device",
             question: "抬手亮屏為什麼不亮？",
             answer: `
@@ -290,18 +311,21 @@ window.i18nData['zh-TW'] = {
             {faq_note}如果以上方法都無法解決問題，請嘗試拍攝手錶的系統資訊的照片以及將手機的一些系統資訊截圖，透過 App 中的意見回饋功能向我們回饋，在聯絡我們的時候盡量提供更多的有效資訊給我們，以便我們更好的解決問題。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手錶裝置最多可以設定幾個鬧鐘？",
             answer: `
             這個根據您的手錶裝置而定， 通常情況下， 手錶裝置可以設定 5 個鬧鐘。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手錶裝置怎麼調整時間？",
             answer: `
             手錶裝置跟手機連接後會自動同步時間，無需手動調節。`
         },
         {
+            platform: "all",
             category: "device",
             question: "手錶裝置如何設定語言？",
             answer: `
@@ -310,12 +334,14 @@ window.i18nData['zh-TW'] = {
             {faq_note}部分手錶支援在手錶端設定語言，具體來說，在手錶端開啟【選單】 - 【設定】 - 【語言】 ， 然後選擇您想要設定的語言。`
         },
         {
+            platform: "all",
             category: "other",
             question: "電池使用時間為什麼變短？",
             answer: `
             若手錶裝置開啟了翻腕亮屏、定時心率檢測等功能會加大耗電量，減少電池使用時間。`
         },
         {
+            platform: "all",
             category: "other",
             question: "手錶裝置是否防水？",
             answer: `
